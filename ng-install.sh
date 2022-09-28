@@ -2,7 +2,7 @@
 
 echo "Remove old nodejs"
 echo "+----------------+"
-sudo apt-get purge --auto-remove nodejs
+sudo apt-get purge --auto-remove nodejs --yes
 
 echo "Check node and npm version"
 echo "+------------------------+"
@@ -11,19 +11,19 @@ npm -v
 
 echo "Remove ng-common"
 echo "+--------------+"
-sudo apt-get purge --auto-remove ng-common 
+sudo apt-get purge --auto-remove ng-common --yes
 
 echo "Check angular version"
 echo "+--------------------+"
 ng version
 
-echo "Get node version 12 source code"
+echo "Get node version 16 source code"
 echo "+-----------------------------+"
-wget https://deb.nodesource.com/setup_12.x -O ./bash-script-nodejs-setup_12.x.sh
+wget https://deb.nodesource.com/setup_16.x -O ./bash-script-nodejs-setup_16.x.sh
 
-echo "Setup nodejs version 12 from source code"
+echo "Setup nodejs version 16 from source code"
 echo "+---------------------------------------+"
-sudo -E bash ./bash-script-nodejs-setup_12.x.sh
+sudo -E bash ./bash-script-nodejs-setup_16.x.sh
 sudo apt-get install -y nodejs
 
 echo "Check node and npm version"
@@ -31,9 +31,9 @@ echo "+------------------------+"
 node -v
 npm -v
 
-echo "Install angular@12"
+echo "Install angular"
 echo "+----------------+"
-sudo npm install -g @angular/cli@12 --yes
+sudo npm install -g @angular/cli@14 --yes --yes --yes
 echo "Check angular version"
 echo "+--------------------+"
 ng version
