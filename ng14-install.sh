@@ -13,9 +13,9 @@ echo "Remove ng-common"
 echo "+--------------+"
 sudo apt-get purge --auto-remove ng-common --yes
 
-echo "Check angular version"
+echo "Check angular"
 echo "+--------------------+"
-ng version
+echo $(which ng)
 
 echo "Get node version 16 source code"
 echo "+-----------------------------+"

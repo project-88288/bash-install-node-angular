@@ -5,9 +5,9 @@ echo "+------------------------+"
 node -v
 npm -v
 
-echo "Check angular version"
+echo "Check angular"
 echo "+--------------------+"
-ng version
+echo $(which ng)
 
 echo "Remove ng-common"
 echo "+--------------+"
